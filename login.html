@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{%  load bootstrap3 %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url("http://img1.tebyan.net/Big/1392/02/5413290402102302459522611918232176124128205.jpg");
+
+        }
+        #login{
+            text-align: center;
+            color:white;
+            padding-top: 50px;
+            padding-bottom:50px ;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+        #signup{
+            text-align: center;
+            color: white;
+            padding-bottom: 40%;
+            padding-top: 30px;
+            margin-left: 500px;
+            margin-right: 500px;
+        }
+        button{
+            color:darkslategray;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+    <form id='login' method="post" action="">
+        {%  csrf_token %}
+        {% bootstrap_form logform %}
+        <button type="submit" name="submit" value="Log In">Log In</button>
+
+    </form>
+    <form id='signup' method="post" action="">
+            {%  csrf_token %}
+            {% bootstrap_form signform %}
+        <button type="submit" name="submit" value="Sign Up">Sign Up</button>
+     </form>
+
+</body>
+</html>
